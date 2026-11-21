@@ -1,0 +1,163 @@
+{
+  "synthetic": true,
+  "encoding": "UTF-8",
+  "tables": {
+    "works": {
+      "count": 24,
+      "fields": [
+        "work_id",
+        "theme",
+        "annual_lux_hours",
+        "max_lux"
+      ],
+      "primary_key": [
+        "work_id"
+      ],
+      "sha256": "1d1946b7dad50457490eb44227f05c9f6156a5ed39f43d9a36d4f7d864472cd9"
+    },
+    "cabinets": {
+      "count": 6,
+      "fields": [
+        "cabinet_id",
+        "venue_id",
+        "max_lux",
+        "max_gap_minutes"
+      ],
+      "primary_key": [
+        "cabinet_id"
+      ],
+      "sha256": "2e88eab094a35ca0f1d294dce817bf484b36d637fe00bcb0ed6f1ff7b4251775"
+    },
+    "instruments": {
+      "count": 6,
+      "fields": [
+        "device_id",
+        "valid_from",
+        "valid_to"
+      ],
+      "primary_key": [
+        "device_id"
+      ],
+      "sha256": "2b15fc8eef7270ac7a2659d2d24d05a7425a8e63d182fc50ff39dc3edf032fe2"
+    },
+    "readings": {
+      "count": 429,
+      "fields": [
+        "reading_id",
+        "device_id",
+        "cabinet_id",
+        "at",
+        "lux"
+      ],
+      "primary_key": [
+        "reading_id"
+      ],
+      "sha256": "b5b01f7054cac6d3e9fa318ca954541686403d3f5cea319f3ef95153becc9d9e"
+    },
+    "placements": {
+      "count": 24,
+      "fields": [
+        "placement_id",
+        "work_id",
+        "cabinet_id",
+        "start",
+        "end"
+      ],
+      "primary_key": [
+        "placement_id"
+      ],
+      "sha256": "caf44add30da39e5c232b5f76e3869a39c3a2cd74082ea85920cb0e873899854"
+    },
+    "calibrations": {
+      "count": 2,
+      "fields": [
+        "calibration_id",
+        "device_id",
+        "start",
+        "end",
+        "gain",
+        "offset",
+        "issued_at",
+        "supersedes"
+      ],
+      "primary_key": [
+        "calibration_id"
+      ],
+      "sha256": "d9dfcb4f4bc3a6d51652f0ad7053ccdcb7524f991c321e36cc61919902de87ae"
+    },
+    "blackouts": {
+      "count": 1,
+      "fields": [
+        "blackout_id",
+        "cabinet_id",
+        "start",
+        "end"
+      ],
+      "primary_key": [
+        "blackout_id"
+      ],
+      "sha256": "05ce7047b91a8e4a9d21e51b5d80b6cbb71240e187370c60584eb288b69efd49"
+    },
+    "shows": {
+      "count": 3,
+      "fields": [
+        "show_id",
+        "venue_id",
+        "start",
+        "end",
+        "status",
+        "cancel_before",
+        "cancel_cost",
+        "min_items",
+        "theme"
+      ],
+      "primary_key": [
+        "show_id"
+      ],
+      "sha256": "02a095e9c78f191e5111b825db8752590c2012fb8f2366f9faefc178aa7d03bd"
+    },
+    "commitments": {
+      "count": 2,
+      "fields": [
+        "commitment_id",
+        "show_id",
+        "work_id",
+        "planned_lux",
+        "daily_hours"
+      ],
+      "primary_key": [
+        "commitment_id"
+      ],
+      "sha256": "e705d7577d9cf56ffd27ffbc0f4150e1394dad73337b36c23fb021eb62b1d38d"
+    },
+    "eligibility": {
+      "count": 71,
+      "fields": [
+        "eligibility_id",
+        "work_id",
+        "venue_id",
+        "theme",
+        "venue_grade",
+        "start",
+        "end"
+      ],
+      "primary_key": [
+        "eligibility_id"
+      ],
+      "sha256": "c4996186572fa1028cbc89c0c00e4a85040194c9ffd149ef7b83d1b1438c3066"
+    },
+    "actions": {
+      "count": 2,
+      "fields": [
+        "action_id",
+        "at",
+        "action",
+        "object_id"
+      ],
+      "primary_key": [
+        "action_id"
+      ],
+      "sha256": "8acea1285e3e4f75bb4e42108466432f45e756acde934bb53f0cd139695c4fb6"
+    }
+  }
+}
